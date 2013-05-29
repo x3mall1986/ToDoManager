@@ -23,7 +23,7 @@
 	self = [super initWithCoder:aDecoder];
 	if (self) {
         // Initialization code
-		self.textLabel.font = [UIFont fontWithName:@"Roboto-Light" size:32.0f];
+		self.textLabel.font = [SkinHelper RobotoLightWithSize:32.0f];
 		self.textLabel.numberOfLines = 2;
     }
 	return self;

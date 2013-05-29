@@ -10,20 +10,8 @@
 
 @implementation SkinHelper
 
-+ (UIFont *)helveticaNeueBoldWithSize:(CGFloat)size {
-	return [UIFont fontWithName:@"HelveticaNeue-Bold" size:size];
-}
-
-+ (UIFont *)helveticaNeueMediumWithSize:(CGFloat)size {
-	return [UIFont fontWithName:@"HelveticaNeue-Medium" size:size];
-}
-
-+ (UIFont *)helveticaNeueRegularWithSize:(CGFloat)size {
-	return [UIFont fontWithName:@"HelveticaNeue" size:size];
-}
-
-+ (UIFont *)helveticaNeueLightWithSize:(CGFloat)size {
-	return [UIFont fontWithName:@"HelveticaNeue-Light" size:size];
++ (UIFont *)RobotoLightWithSize:(CGFloat)size {
+	return [UIFont fontWithName:@"Roboto-Light" size:size];
 }
 
 @end

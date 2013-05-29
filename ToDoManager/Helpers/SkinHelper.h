@@ -10,9 +10,6 @@
 
 @interface SkinHelper : NSObject
 
-+ (UIFont *)helveticaNeueBoldWithSize:(CGFloat)size;
-+ (UIFont *)helveticaNeueMediumWithSize:(CGFloat)size;
-+ (UIFont *)helveticaNeueRegularWithSize:(CGFloat)size;
-+ (UIFont *)helveticaNeueLightWithSize:(CGFloat)size;
++ (UIFont *)RobotoLightWithSize:(CGFloat)size;
 
 @end
