@@ -17,8 +17,14 @@
 		E7D59E1C175534D00024D9E3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E1B175534D00024D9E3 /* Default@2x.png */; };
 		E7D59E1E175534D00024D9E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E1D175534D00024D9E3 /* Default-568h@2x.png */; };
 		E7D59E21175534D00024D9E3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E1F175534D00024D9E3 /* MainStoryboard.storyboard */; };
-		E7D59E24175534D00024D9E3 /* TDMMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E23175534D00024D9E3 /* TDMMasterViewController.m */; };
-		E7D59E27175534D00024D9E3 /* TDMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E26175534D00024D9E3 /* TDMDetailViewController.m */; };
+		E7D59E8817562DD90024D9E3 /* TDMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E8517562DD90024D9E3 /* TDMDetailViewController.m */; };
+		E7D59E8917562DD90024D9E3 /* TDMMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E8717562DD90024D9E3 /* TDMMasterViewController.m */; };
+		E7D59E8D17562E6B0024D9E3 /* TDMViewControllerExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E8C17562E6B0024D9E3 /* TDMViewControllerExtended.m */; };
+		E7D59E91175630150024D9E3 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E90175630150024D9E3 /* background@2x.png */; };
+		E7D59E95175631440024D9E3 /* TDMCellExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E94175631440024D9E3 /* TDMCellExtended.m */; };
+		E7D59E97175632360024D9E3 /* cellLeftImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E96175632360024D9E3 /* cellLeftImage@2x.png */; };
+		E7D59E99175633CA0024D9E3 /* tableViewSeparator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E98175633C90024D9E3 /* tableViewSeparator@2x.png */; };
+		E7D59E9C1756362E0024D9E3 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E9B1756362E0024D9E3 /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +42,18 @@
 		E7D59E1B175534D00024D9E3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E7D59E1D175534D00024D9E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E7D59E20175534D00024D9E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E7D59E22175534D00024D9E3 /* TDMMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDMMasterViewController.h; sourceTree = "<group>"; };
-		E7D59E23175534D00024D9E3 /* TDMMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDMMasterViewController.m; sourceTree = "<group>"; };
-		E7D59E25175534D00024D9E3 /* TDMDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDMDetailViewController.h; sourceTree = "<group>"; };
-		E7D59E26175534D00024D9E3 /* TDMDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDMDetailViewController.m; sourceTree = "<group>"; };
+		E7D59E8417562DD90024D9E3 /* TDMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMDetailViewController.h; sourceTree = "<group>"; };
+		E7D59E8517562DD90024D9E3 /* TDMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMDetailViewController.m; sourceTree = "<group>"; };
+		E7D59E8617562DD90024D9E3 /* TDMMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMMasterViewController.h; sourceTree = "<group>"; };
+		E7D59E8717562DD90024D9E3 /* TDMMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMMasterViewController.m; sourceTree = "<group>"; };
+		E7D59E8B17562E6B0024D9E3 /* TDMViewControllerExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMViewControllerExtended.h; sourceTree = "<group>"; };
+		E7D59E8C17562E6B0024D9E3 /* TDMViewControllerExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMViewControllerExtended.m; sourceTree = "<group>"; };
+		E7D59E90175630150024D9E3 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		E7D59E93175631440024D9E3 /* TDMCellExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMCellExtended.h; sourceTree = "<group>"; };
+		E7D59E94175631440024D9E3 /* TDMCellExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMCellExtended.m; sourceTree = "<group>"; };
+		E7D59E96175632360024D9E3 /* cellLeftImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellLeftImage@2x.png"; sourceTree = "<group>"; };
+		E7D59E98175633C90024D9E3 /* tableViewSeparator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewSeparator@2x.png"; sourceTree = "<group>"; };
+		E7D59E9B1756362E0024D9E3 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +100,12 @@
 		E7D59E0D175534D00024D9E3 /* ToDoManager */ = {
 			isa = PBXGroup;
 			children = (
+				E7D59E921756311D0024D9E3 /* Views */,
+				E7D59E8317562DD90024D9E3 /* Controllers */,
 				E7D59E16175534D00024D9E3 /* TDMAppDelegate.h */,
 				E7D59E17175534D00024D9E3 /* TDMAppDelegate.m */,
 				E7D59E1F175534D00024D9E3 /* MainStoryboard.storyboard */,
-				E7D59E22175534D00024D9E3 /* TDMMasterViewController.h */,
-				E7D59E23175534D00024D9E3 /* TDMMasterViewController.m */,
-				E7D59E25175534D00024D9E3 /* TDMDetailViewController.h */,
-				E7D59E26175534D00024D9E3 /* TDMDetailViewController.m */,
+				E7D59E8E175630140024D9E3 /* Resources */,
 				E7D59E0E175534D00024D9E3 /* Supporting Files */,
 			);
 			path = ToDoManager;
@@ -110,6 +123,63 @@
 				E7D59E1D175534D00024D9E3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7D59E8317562DD90024D9E3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59E8A17562E190024D9E3 /* Parents */,
+				E7D59E8417562DD90024D9E3 /* TDMDetailViewController.h */,
+				E7D59E8517562DD90024D9E3 /* TDMDetailViewController.m */,
+				E7D59E8617562DD90024D9E3 /* TDMMasterViewController.h */,
+				E7D59E8717562DD90024D9E3 /* TDMMasterViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E7D59E8A17562E190024D9E3 /* Parents */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59E8B17562E6B0024D9E3 /* TDMViewControllerExtended.h */,
+				E7D59E8C17562E6B0024D9E3 /* TDMViewControllerExtended.m */,
+			);
+			path = Parents;
+			sourceTree = "<group>";
+		};
+		E7D59E8E175630140024D9E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59E9A1756362E0024D9E3 /* Fonts */,
+				E7D59E8F175630150024D9E3 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7D59E8F175630150024D9E3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59E98175633C90024D9E3 /* tableViewSeparator@2x.png */,
+				E7D59E96175632360024D9E3 /* cellLeftImage@2x.png */,
+				E7D59E90175630150024D9E3 /* background@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		E7D59E921756311D0024D9E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59E93175631440024D9E3 /* TDMCellExtended.h */,
+				E7D59E94175631440024D9E3 /* TDMCellExtended.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E7D59E9A1756362E0024D9E3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59E9B1756362E0024D9E3 /* Roboto-Light.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +239,10 @@
 				E7D59E1C175534D00024D9E3 /* Default@2x.png in Resources */,
 				E7D59E1E175534D00024D9E3 /* Default-568h@2x.png in Resources */,
 				E7D59E21175534D00024D9E3 /* MainStoryboard.storyboard in Resources */,
+				E7D59E91175630150024D9E3 /* background@2x.png in Resources */,
+				E7D59E97175632360024D9E3 /* cellLeftImage@2x.png in Resources */,
+				E7D59E99175633CA0024D9E3 /* tableViewSeparator@2x.png in Resources */,
+				E7D59E9C1756362E0024D9E3 /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +255,10 @@
 			files = (
 				E7D59E14175534D00024D9E3 /* main.m in Sources */,
 				E7D59E18175534D00024D9E3 /* TDMAppDelegate.m in Sources */,
-				E7D59E24175534D00024D9E3 /* TDMMasterViewController.m in Sources */,
-				E7D59E27175534D00024D9E3 /* TDMDetailViewController.m in Sources */,
+				E7D59E8817562DD90024D9E3 /* TDMDetailViewController.m in Sources */,
+				E7D59E8917562DD90024D9E3 /* TDMMasterViewController.m in Sources */,
+				E7D59E8D17562E6B0024D9E3 /* TDMViewControllerExtended.m in Sources */,
+				E7D59E95175631440024D9E3 /* TDMCellExtended.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +381,7 @@
 				E7D59E2C175534D00024D9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

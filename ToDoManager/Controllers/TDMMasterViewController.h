@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 PaksHome. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TDMViewControllerExtended.h"
 
-@interface TDMMasterViewController : UITableViewController
+@interface TDMMasterViewController : TDMViewControllerExtended
 
 @end
