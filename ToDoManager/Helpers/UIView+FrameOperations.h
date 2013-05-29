@@ -10,15 +10,23 @@
 
 @interface UIView (FrameOperations)
 
+@property (nonatomic) CGFloat left;
+@property (nonatomic) CGFloat top;
+@property (nonatomic) CGFloat right;
+@property (nonatomic) CGFloat bottom;
+@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat height;
+
+@property (nonatomic) CGPoint origin;
+@property (nonatomic) CGSize size;
+
 - (void)setSizeWidth:(CGFloat)width;
 - (void)setSizeHeight:(CGFloat)height;
 - (void)setSizeWidth:(CGFloat)width sizeHeight:(CGFloat)height;
-- (void)setSize:(CGSize)size;
 
 - (void)setOriginX:(CGFloat)originX;
 - (void)setOriginY:(CGFloat)originY;
 - (void)setOriginX:(CGFloat)originX originY:(CGFloat)originY;
-- (void)setOrigin:(CGPoint)origin;
 
 - (void)centerRelativeToView:(UIView *)view;
 - (void)centerRelativeToSuperview;

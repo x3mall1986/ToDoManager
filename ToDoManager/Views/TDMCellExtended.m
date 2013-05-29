@@ -37,7 +37,7 @@
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
-	[self.tdmImageView setOriginX:15.0f originY:self.frame.size.height / 2 - self.tdmImageView.center.y];
+	[self.tdmImageView setOriginX:15.0f originY:self.height / 2 - self.tdmImageView.center.y];
 	[self.textLabel setOriginX:60.0f];
 	[self.textLabel setSizeWidth:250.0f];
 

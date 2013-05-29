@@ -10,18 +10,94 @@
 
 @implementation UIView (FrameOperations)
 
+- (CGFloat)left {
+    return self.frame.origin.x;
+}
+
+- (void)setLeft:(CGFloat)x {
+    CGRect frame = self.frame;
+    frame.origin.x = x;
+    self.frame = frame;
+}
+
+- (CGFloat)top {
+    return self.frame.origin.y;
+}
+
+- (void)setTop:(CGFloat)y {
+    CGRect frame = self.frame;
+    frame.origin.y = y;
+    self.frame = frame;
+}
+
+- (CGFloat)right {
+    return self.frame.origin.x + self.frame.size.width;
+}
+
+- (void)setRight:(CGFloat)right {
+    CGRect frame = self.frame;
+    frame.origin.x = right - frame.size.width;
+    self.frame = frame;
+}
+
+- (CGFloat)bottom {
+    return self.frame.origin.y + self.frame.size.height;
+}
+
+- (void)setBottom:(CGFloat)bottom {
+    CGRect frame = self.frame;
+    frame.origin.y = bottom - frame.size.height;
+    self.frame = frame;
+}
+
+- (CGFloat)width {
+    return self.frame.size.width;
+}
+
+- (void)setWidth:(CGFloat)width {
+    CGRect frame = self.frame;
+    frame.size.width = width;
+    self.frame = frame;
+}
+
+- (CGFloat)height {
+    return self.frame.size.height;
+}
+
+- (void)setHeight:(CGFloat)height {
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    self.frame = frame;
+}
+
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+
+- (void)setOrigin:(CGPoint)origin {
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+
+- (CGSize)size {
+    return self.frame.size;
+}
+
+- (void)setSize:(CGSize)size {
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
 - (void)setSizeWidth:(CGFloat)width
 {
-	CGRect frame = self.frame;
-	frame.size = CGSizeMake(width, frame.size.height);
-	self.frame = frame;
+	[self setWidth:width];
 }
 
 - (void)setSizeHeight:(CGFloat)height
 {
-	CGRect frame = self.frame;
-	frame.size = CGSizeMake(frame.size.width, height);
-	self.frame = frame;
+	[self setHeight:height];
 }
 
 - (void)setSizeWidth:(CGFloat)width sizeHeight:(CGFloat)height
@@ -30,36 +106,20 @@
 	[self setSizeHeight:height];
 }
 
-- (void)setSize:(CGSize)size
-{
-	[self setSizeWidth:size.width];
-	[self setSizeHeight:size.height];
-}
-
 - (void)setOriginX:(CGFloat)originX
 {
-	CGRect frame = self.frame;
-	frame.origin = CGPointMake(originX, frame.origin.y);
-	self.frame = frame;
+	[self setLeft:originX];
 }
 
 - (void)setOriginY:(CGFloat)originY
 {
-	CGRect frame = self.frame;
-	frame.origin = CGPointMake(frame.origin.x, originY);
-	self.frame = frame;
+	[self setTop:originY];
 }
 
 - (void)setOriginX:(CGFloat)originX originY:(CGFloat)originY
 {
 	[self setOriginX:originX];
 	[self setOriginY:originY];
-}
-
-- (void)setOrigin:(CGPoint)origin
-{
-	[self setOriginX:origin.x];
-	[self setOriginY:origin.y];
 }
 
 - (void)centerRelativeToView:(UIView *)view
