@@ -24,15 +24,23 @@
 	if (self) {
         // Initialization code
 		self.textLabel.font = [UIFont fontWithName:@"Roboto-Light" size:32.0f];
+		self.textLabel.numberOfLines = 2;
     }
 	return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
+- (void)setTdmImageView:(TDMCellImageView *)tdmImageView {
+	_tdmImageView = tdmImageView;
+	
+	[self addSubview:tdmImageView];
+}
 
-    // Configure the view for the selected state
+- (void)layoutSubviews {
+	[super layoutSubviews];
+	[self.tdmImageView setOriginX:15.0f originY:self.frame.size.height / 2 - self.tdmImageView.center.y];
+	[self.textLabel setOriginX:60.0f];
+	[self.textLabel setSizeWidth:250.0f];
+
 }
 
 @end

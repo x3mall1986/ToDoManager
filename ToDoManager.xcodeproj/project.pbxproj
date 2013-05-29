@@ -22,9 +22,13 @@
 		E7D59E8D17562E6B0024D9E3 /* TDMViewControllerExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E8C17562E6B0024D9E3 /* TDMViewControllerExtended.m */; };
 		E7D59E91175630150024D9E3 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E90175630150024D9E3 /* background@2x.png */; };
 		E7D59E95175631440024D9E3 /* TDMCellExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E94175631440024D9E3 /* TDMCellExtended.m */; };
-		E7D59E97175632360024D9E3 /* cellLeftImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E96175632360024D9E3 /* cellLeftImage@2x.png */; };
+		E7D59E97175632360024D9E3 /* cellImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E96175632360024D9E3 /* cellImage@2x.png */; };
 		E7D59E99175633CA0024D9E3 /* tableViewSeparator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E98175633C90024D9E3 /* tableViewSeparator@2x.png */; };
 		E7D59E9C1756362E0024D9E3 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7D59E9B1756362E0024D9E3 /* Roboto-Light.ttf */; };
+		E7D59E9F17563A9E0024D9E3 /* TDMCellImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59E9E17563A9E0024D9E3 /* TDMCellImageView.m */; };
+		E7D59EA717564A4B0024D9E3 /* SkinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59EA217564A4B0024D9E3 /* SkinHelper.m */; };
+		E7D59EA817564A4B0024D9E3 /* UIScreen+iPhone5.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59EA417564A4B0024D9E3 /* UIScreen+iPhone5.m */; };
+		E7D59EA917564A4B0024D9E3 /* UIView+FrameOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D59EA617564A4B0024D9E3 /* UIView+FrameOperations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +55,17 @@
 		E7D59E90175630150024D9E3 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		E7D59E93175631440024D9E3 /* TDMCellExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMCellExtended.h; sourceTree = "<group>"; };
 		E7D59E94175631440024D9E3 /* TDMCellExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMCellExtended.m; sourceTree = "<group>"; };
-		E7D59E96175632360024D9E3 /* cellLeftImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellLeftImage@2x.png"; sourceTree = "<group>"; };
+		E7D59E96175632360024D9E3 /* cellImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellImage@2x.png"; sourceTree = "<group>"; };
 		E7D59E98175633C90024D9E3 /* tableViewSeparator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewSeparator@2x.png"; sourceTree = "<group>"; };
 		E7D59E9B1756362E0024D9E3 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		E7D59E9D17563A9E0024D9E3 /* TDMCellImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMCellImageView.h; sourceTree = "<group>"; };
+		E7D59E9E17563A9E0024D9E3 /* TDMCellImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMCellImageView.m; sourceTree = "<group>"; };
+		E7D59EA117564A4B0024D9E3 /* SkinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkinHelper.h; sourceTree = "<group>"; };
+		E7D59EA217564A4B0024D9E3 /* SkinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkinHelper.m; sourceTree = "<group>"; };
+		E7D59EA317564A4B0024D9E3 /* UIScreen+iPhone5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+iPhone5.h"; sourceTree = "<group>"; };
+		E7D59EA417564A4B0024D9E3 /* UIScreen+iPhone5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+iPhone5.m"; sourceTree = "<group>"; };
+		E7D59EA517564A4B0024D9E3 /* UIView+FrameOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameOperations.h"; sourceTree = "<group>"; };
+		E7D59EA617564A4B0024D9E3 /* UIView+FrameOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameOperations.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,7 @@
 		E7D59E0D175534D00024D9E3 /* ToDoManager */ = {
 			isa = PBXGroup;
 			children = (
+				E7D59EA017564A480024D9E3 /* Helpers */,
 				E7D59E921756311D0024D9E3 /* Views */,
 				E7D59E8317562DD90024D9E3 /* Controllers */,
 				E7D59E16175534D00024D9E3 /* TDMAppDelegate.h */,
@@ -159,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				E7D59E98175633C90024D9E3 /* tableViewSeparator@2x.png */,
-				E7D59E96175632360024D9E3 /* cellLeftImage@2x.png */,
+				E7D59E96175632360024D9E3 /* cellImage@2x.png */,
 				E7D59E90175630150024D9E3 /* background@2x.png */,
 			);
 			path = Images;
@@ -170,6 +183,8 @@
 			children = (
 				E7D59E93175631440024D9E3 /* TDMCellExtended.h */,
 				E7D59E94175631440024D9E3 /* TDMCellExtended.m */,
+				E7D59E9D17563A9E0024D9E3 /* TDMCellImageView.h */,
+				E7D59E9E17563A9E0024D9E3 /* TDMCellImageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +195,19 @@
 				E7D59E9B1756362E0024D9E3 /* Roboto-Light.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E7D59EA017564A480024D9E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59EA117564A4B0024D9E3 /* SkinHelper.h */,
+				E7D59EA217564A4B0024D9E3 /* SkinHelper.m */,
+				E7D59EA317564A4B0024D9E3 /* UIScreen+iPhone5.h */,
+				E7D59EA417564A4B0024D9E3 /* UIScreen+iPhone5.m */,
+				E7D59EA517564A4B0024D9E3 /* UIView+FrameOperations.h */,
+				E7D59EA617564A4B0024D9E3 /* UIView+FrameOperations.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +268,7 @@
 				E7D59E1E175534D00024D9E3 /* Default-568h@2x.png in Resources */,
 				E7D59E21175534D00024D9E3 /* MainStoryboard.storyboard in Resources */,
 				E7D59E91175630150024D9E3 /* background@2x.png in Resources */,
-				E7D59E97175632360024D9E3 /* cellLeftImage@2x.png in Resources */,
+				E7D59E97175632360024D9E3 /* cellImage@2x.png in Resources */,
 				E7D59E99175633CA0024D9E3 /* tableViewSeparator@2x.png in Resources */,
 				E7D59E9C1756362E0024D9E3 /* Roboto-Light.ttf in Resources */,
 			);
@@ -259,6 +287,10 @@
 				E7D59E8917562DD90024D9E3 /* TDMMasterViewController.m in Sources */,
 				E7D59E8D17562E6B0024D9E3 /* TDMViewControllerExtended.m in Sources */,
 				E7D59E95175631440024D9E3 /* TDMCellExtended.m in Sources */,
+				E7D59E9F17563A9E0024D9E3 /* TDMCellImageView.m in Sources */,
+				E7D59EA717564A4B0024D9E3 /* SkinHelper.m in Sources */,
+				E7D59EA817564A4B0024D9E3 /* UIScreen+iPhone5.m in Sources */,
+				E7D59EA917564A4B0024D9E3 /* UIView+FrameOperations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

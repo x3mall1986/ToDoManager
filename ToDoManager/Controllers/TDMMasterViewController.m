@@ -9,6 +9,8 @@
 #import "TDMMasterViewController.h"
 
 #import "TDMDetailViewController.h"
+#import "TDMCellImageView.h"
+#import "TDMCellExtended.h"
 
 @interface TDMMasterViewController () {
     NSMutableArray *_objects;
@@ -49,9 +51,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
+    TDMCellExtended *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+	TDMCellImageView *image = [TDMCellImageView new];
+//	image.fillPercent = 100.0f;
+	
 	cell.textLabel.text = _rows[indexPath.row];
+	cell.tdmImageView = image;
     return cell;
 }
 

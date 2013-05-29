@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TDMCellImageView.h"
 
 @interface TDMCellExtended : UITableViewCell
+
+@property (strong, nonatomic) TDMCellImageView *tdmImageView;
 
 @end
