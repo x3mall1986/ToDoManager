@@ -10,15 +10,6 @@
 
 @implementation TDMCellExtended
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 - (void)setLeftView:(UIView *)leftView {
 	_leftView = leftView;
 
@@ -36,6 +27,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
+		self.backgroundColor = [UIColor clearColor];
         // Initialization code
 		self.textLabel.font = [SkinHelper RobotoLightWithSize:32.0f];
 		self.textLabel.numberOfLines = 2;

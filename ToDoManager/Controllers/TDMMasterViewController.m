@@ -10,6 +10,7 @@
 
 #import "TDMDetailViewController.h"
 #import "TDMCellExtended.h"
+#import "TDMCellPlaceholder.h"
 #import "TDMFillingProgressViewController.h"
 
 #define ROW_TITLE_KEY @"title"
@@ -22,7 +23,7 @@
 	NSArray *_rows;
 	
 	// a cell which is rendered as a placeholder to indicate where a new item is added
-	TDMCellExtended* _placeholderCell;
+	TDMCellPlaceholder* _placeholderCell;
 	
 	// indicates the state of this behaviour
     BOOL _pullDownInProgress;
@@ -37,9 +38,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	//	_rows = @[@"Выпускной", @"Поход в горы", @"Свадьба у Васи и Кристины", @"Тюнинг авто"];
 	
-	_placeholderCell = [[TDMCellExtended alloc] init];
-	_placeholderCell.backgroundColor = [UIColor redColor];
+	_placeholderCell = [self.tableView dequeueReusableCellWithIdentifier:@"CellPlaceholder"];
+//	_placeholderCell.backgroundColor = [UIColor redColor];
 	_placeholderCell.alpha = 0.0f;
+	_placeholderCell.textLabel.text = @"Новый Список";
 	
 	_rows = @[@{ROW_TITLE_KEY: @"Выпускной", ROW_PERCENT_KEY: @(100)},
 		   @{ROW_TITLE_KEY: @"Поход в горы", ROW_PERCENT_KEY: @(75)},
@@ -116,7 +118,6 @@
     
     if (_pullDownInProgress) {
         // add our placeholder
-//        [self.tableView insertSubview:_placeholderCell atIndex:0];
 		_placeholderCell.frame = CGRectMake(0, -SHC_ROW_HEIGHT,
 											self.tableView.frame.size.width, SHC_ROW_HEIGHT);
 		[self.tableView addSubview:_placeholderCell];
@@ -128,10 +129,6 @@
     if (_pullDownInProgress && scrollView.contentOffset.y <= 0.0f) {
 		NSLog(@"%f", - scrollView.contentOffset.y - SHC_ROW_HEIGHT);
         // maintain the location of the placeholder
-//        _placeholderCell.frame = CGRectMake(0, - scrollView.contentOffset.y - SHC_ROW_HEIGHT,
-//											self.tableView.frame.size.width, SHC_ROW_HEIGHT);
-        _placeholderCell.textLabel.text = -scrollView.contentOffset.y > SHC_ROW_HEIGHT ?
-		@"Release to Add Item" : @"Pull to Add Item";
         
         _placeholderCell.alpha = MIN(1.0f, - scrollView.contentOffset.y / SHC_ROW_HEIGHT);
 	} else {

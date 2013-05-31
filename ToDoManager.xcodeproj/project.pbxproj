@@ -13,6 +13,8 @@
 		E76EB3511758A83600FC32A5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76EB3501758A83600FC32A5 /* QuartzCore.framework */; };
 		E76EB3541758BFAC00FC32A5 /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E76EB3521758BFAC00FC32A5 /* UIColor+i7HexColor.m */; };
 		E76EB3561758C40400FC32A5 /* okCellIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76EB3551758C40400FC32A5 /* okCellIcon@2x.png */; };
+		E7723A041758D27E0009BCD2 /* TDMCellPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = E7723A031758D27E0009BCD2 /* TDMCellPlaceholder.m */; };
+		E7723A061758D6950009BCD2 /* plusCellPlaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7723A051758D6950009BCD2 /* plusCellPlaceholder@2x.png */; };
 		E7D59E08175534D00024D9E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D59E07175534D00024D9E3 /* UIKit.framework */; };
 		E7D59E0A175534D00024D9E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D59E09175534D00024D9E3 /* Foundation.framework */; };
 		E7D59E0C175534D00024D9E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D59E0B175534D00024D9E3 /* CoreGraphics.framework */; };
@@ -45,6 +47,9 @@
 		E76EB3521758BFAC00FC32A5 /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
 		E76EB3531758BFAC00FC32A5 /* UIColor+i7HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+i7HexColor.h"; sourceTree = "<group>"; };
 		E76EB3551758C40400FC32A5 /* okCellIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "okCellIcon@2x.png"; sourceTree = "<group>"; };
+		E7723A021758D27E0009BCD2 /* TDMCellPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMCellPlaceholder.h; sourceTree = "<group>"; };
+		E7723A031758D27E0009BCD2 /* TDMCellPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMCellPlaceholder.m; sourceTree = "<group>"; };
+		E7723A051758D6950009BCD2 /* plusCellPlaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plusCellPlaceholder@2x.png"; sourceTree = "<group>"; };
 		E7D59E04175534D00024D9E3 /* ToDoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D59E07175534D00024D9E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E7D59E09175534D00024D9E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -187,6 +192,7 @@
 		E7D59E8F175630150024D9E3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E7723A051758D6950009BCD2 /* plusCellPlaceholder@2x.png */,
 				E76EB3551758C40400FC32A5 /* okCellIcon@2x.png */,
 				E76EB34917589E7100FC32A5 /* frameCellImage@2x.png */,
 				E7D59E98175633C90024D9E3 /* tableViewSeparator@2x.png */,
@@ -201,6 +207,8 @@
 			children = (
 				E7D59E93175631440024D9E3 /* TDMCellExtended.h */,
 				E7D59E94175631440024D9E3 /* TDMCellExtended.m */,
+				E7723A021758D27E0009BCD2 /* TDMCellPlaceholder.h */,
+				E7723A031758D27E0009BCD2 /* TDMCellPlaceholder.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 				E76EB34A17589E7100FC32A5 /* frameCellImage@2x.png in Resources */,
 				E76EB34F17589F6400FC32A5 /* TDMFillingProgressViewController.xib in Resources */,
 				E76EB3561758C40400FC32A5 /* okCellIcon@2x.png in Resources */,
+				E7723A061758D6950009BCD2 /* plusCellPlaceholder@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +322,7 @@
 				E7D59EA917564A4B0024D9E3 /* UIView+FrameOperations.m in Sources */,
 				E76EB34E17589F6400FC32A5 /* TDMFillingProgressViewController.m in Sources */,
 				E76EB3541758BFAC00FC32A5 /* UIColor+i7HexColor.m in Sources */,
+				E7723A041758D27E0009BCD2 /* TDMCellPlaceholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
