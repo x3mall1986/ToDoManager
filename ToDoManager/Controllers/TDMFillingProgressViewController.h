@@ -14,4 +14,5 @@
 @property (assign, nonatomic) CGFloat fillingPercent;
 
 @property (weak, nonatomic) IBOutlet UIImageView *fillingBackgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *okImageView;
 @end

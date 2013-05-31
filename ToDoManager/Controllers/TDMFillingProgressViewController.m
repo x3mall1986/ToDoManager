@@ -31,15 +31,19 @@
 	if (_fillingPercent == 0.0f) {
 		self.fillingBackgroundImageView.backgroundColor = [UIColor grayColor];
 		[self setFullRoundedCornerForFillImage];
+		self.okImageView.hidden = YES;
 	} else if (_fillingPercent < 50.0f) {
 		self.fillingBackgroundImageView.backgroundColor = [UIColor redColor];
 		[self setBottomRoundedCornerForFillImage];
+		self.okImageView.hidden = YES;
 	} else if (_fillingPercent < 100.0f) {
 		self.fillingBackgroundImageView.backgroundColor = [UIColor orangeColor];
 		[self setBottomRoundedCornerForFillImage];
+		self.okImageView.hidden = YES;
 	} else {
 		self.fillingBackgroundImageView.backgroundColor = [UIColor colorWithHexString:@"#9FCC32"];
 		[self setFullRoundedCornerForFillImage];
+		self.okImageView.hidden = NO;
 	}
 }
 

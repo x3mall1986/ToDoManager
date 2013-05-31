@@ -14,9 +14,18 @@
 
 #define ROW_TITLE_KEY @"title"
 #define ROW_PERCENT_KEY @"percent"
+#define SHC_ROW_HEIGHT 60.0f
 
-@interface TDMMasterViewController () {
+@interface TDMMasterViewController ()
+{
+	// data source for tableView
 	NSArray *_rows;
+	
+	// a cell which is rendered as a placeholder to indicate where a new item is added
+	TDMCellExtended* _placeholderCell;
+	
+	// indicates the state of this behaviour
+    BOOL _pullDownInProgress;
 }
 @end
 
@@ -26,7 +35,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-//	_rows = @[@"Выпускной", @"Поход в горы", @"Свадьба у Васи и Кристины", @"Тюнинг авто"];
+	//	_rows = @[@"Выпускной", @"Поход в горы", @"Свадьба у Васи и Кристины", @"Тюнинг авто"];
+	
+	_placeholderCell = [[TDMCellExtended alloc] init];
+	_placeholderCell.backgroundColor = [UIColor redColor];
+	_placeholderCell.alpha = 0.0f;
+	
 	_rows = @[@{ROW_TITLE_KEY: @"Выпускной", ROW_PERCENT_KEY: @(100)},
 		   @{ROW_TITLE_KEY: @"Поход в горы", ROW_PERCENT_KEY: @(75)},
 		   @{ROW_TITLE_KEY: @"Свадьба у Васи и Кристины", ROW_PERCENT_KEY: @(25)},
@@ -57,8 +71,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	CGSize size = [_rows[indexPath.row][ROW_TITLE_KEY] sizeWithFont:[SkinHelper RobotoLightWithSize:32.0f]
-								   constrainedToSize:CGSizeMake(250, 120)
-									   lineBreakMode:NSLineBreakByWordWrapping];
+												  constrainedToSize:CGSizeMake(250, 120)
+													  lineBreakMode:NSLineBreakByWordWrapping];
 	if (size.height == 38) {
 		return 60.0f;
 	}
@@ -86,28 +100,72 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        [_objects removeObjectAtIndex:indexPath.row];
+		//        [_objects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+#pragma mark - UIScrollViewDelegate methods
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
+    // this behaviour starts when a user pulls down while at the top of the table
+    _pullDownInProgress = scrollView.contentOffset.y <= 0.0f;
+    
+    if (_pullDownInProgress) {
+        // add our placeholder
+//        [self.tableView insertSubview:_placeholderCell atIndex:0];
+		_placeholderCell.frame = CGRectMake(0, -SHC_ROW_HEIGHT,
+											self.tableView.frame.size.width, SHC_ROW_HEIGHT);
+		[self.tableView addSubview:_placeholderCell];
+	}
 }
-*/
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (_pullDownInProgress && scrollView.contentOffset.y <= 0.0f) {
+		NSLog(@"%f", - scrollView.contentOffset.y - SHC_ROW_HEIGHT);
+        // maintain the location of the placeholder
+//        _placeholderCell.frame = CGRectMake(0, - scrollView.contentOffset.y - SHC_ROW_HEIGHT,
+//											self.tableView.frame.size.width, SHC_ROW_HEIGHT);
+        _placeholderCell.textLabel.text = -scrollView.contentOffset.y > SHC_ROW_HEIGHT ?
+		@"Release to Add Item" : @"Pull to Add Item";
+        
+        _placeholderCell.alpha = MIN(1.0f, - scrollView.contentOffset.y / SHC_ROW_HEIGHT);
+	} else {
+        _pullDownInProgress = false;
+	}
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    // check whether the user pulled down far enough
+    if (_pullDownInProgress && - scrollView.contentOffset.y > SHC_ROW_HEIGHT) {
+//        [_tableView.datasource itemAdded];
+	}
+    
+    _pullDownInProgress = false;
+    [_placeholderCell removeFromSuperview];
+}
+
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 //{

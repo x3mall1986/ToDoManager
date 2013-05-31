@@ -12,6 +12,7 @@
 		E76EB34F17589F6400FC32A5 /* TDMFillingProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E76EB34D17589F6400FC32A5 /* TDMFillingProgressViewController.xib */; };
 		E76EB3511758A83600FC32A5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76EB3501758A83600FC32A5 /* QuartzCore.framework */; };
 		E76EB3541758BFAC00FC32A5 /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E76EB3521758BFAC00FC32A5 /* UIColor+i7HexColor.m */; };
+		E76EB3561758C40400FC32A5 /* okCellIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76EB3551758C40400FC32A5 /* okCellIcon@2x.png */; };
 		E7D59E08175534D00024D9E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D59E07175534D00024D9E3 /* UIKit.framework */; };
 		E7D59E0A175534D00024D9E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D59E09175534D00024D9E3 /* Foundation.framework */; };
 		E7D59E0C175534D00024D9E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D59E0B175534D00024D9E3 /* CoreGraphics.framework */; };
@@ -43,6 +44,7 @@
 		E76EB3501758A83600FC32A5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E76EB3521758BFAC00FC32A5 /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
 		E76EB3531758BFAC00FC32A5 /* UIColor+i7HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+i7HexColor.h"; sourceTree = "<group>"; };
+		E76EB3551758C40400FC32A5 /* okCellIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "okCellIcon@2x.png"; sourceTree = "<group>"; };
 		E7D59E04175534D00024D9E3 /* ToDoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D59E07175534D00024D9E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E7D59E09175534D00024D9E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -185,6 +187,7 @@
 		E7D59E8F175630150024D9E3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E76EB3551758C40400FC32A5 /* okCellIcon@2x.png */,
 				E76EB34917589E7100FC32A5 /* frameCellImage@2x.png */,
 				E7D59E98175633C90024D9E3 /* tableViewSeparator@2x.png */,
 				E7D59E96175632360024D9E3 /* cellImage@2x.png */,
@@ -288,6 +291,7 @@
 				E7D59E9C1756362E0024D9E3 /* Roboto-Light.ttf in Resources */,
 				E76EB34A17589E7100FC32A5 /* frameCellImage@2x.png in Resources */,
 				E76EB34F17589F6400FC32A5 /* TDMFillingProgressViewController.xib in Resources */,
+				E76EB3561758C40400FC32A5 /* okCellIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
