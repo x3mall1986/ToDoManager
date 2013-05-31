@@ -8,31 +8,69 @@
 
 #import "TDMFillingProgressViewController.h"
 
+#define FULL_FILLING_EDGE_BOTTOM 3.0f
+#define FULL_FILLING_HEIGHT 29.0f
+
 @interface TDMFillingProgressViewController ()
 
 @end
 
 @implementation TDMFillingProgressViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	
+	[self setFillingImageViewPosition];
+	[self setFillingImageViewBackgroundColor];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - Actions
+- (void)setFillingImageViewBackgroundColor
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	if (_fillingPercent == 0.0f) {
+		self.fillingBackgroundImageView.backgroundColor = [UIColor grayColor];
+		[self setFullRoundedCornerForFillImage];
+	} else if (_fillingPercent < 50.0f) {
+		self.fillingBackgroundImageView.backgroundColor = [UIColor redColor];
+		[self setBottomRoundedCornerForFillImage];
+	} else if (_fillingPercent < 100.0f) {
+		self.fillingBackgroundImageView.backgroundColor = [UIColor orangeColor];
+		[self setBottomRoundedCornerForFillImage];
+	} else {
+		self.fillingBackgroundImageView.backgroundColor = [UIColor colorWithHexString:@"#9FCC32"];
+		[self setFullRoundedCornerForFillImage];
+	}
+}
+
+- (void)setFillingImageViewPosition
+{
+	CGFloat height = (self.fillingPercent) ? FULL_FILLING_HEIGHT * self.fillingPercent / 100 : FULL_FILLING_HEIGHT;
+	self.fillingBackgroundImageView.height = height;
+	self.fillingBackgroundImageView.bottom = self.view.height - FULL_FILLING_EDGE_BOTTOM;
+}
+
+- (void)setFullRoundedCornerForFillImage {
+	UIRectCorner rectCorner = UIRectCornerAllCorners;
+	[self setImageRoundCorners:rectCorner];
+}
+
+- (void)setBottomRoundedCornerForFillImage {
+	UIRectCorner rectCorner = UIRectCornerBottomLeft | UIRectCornerBottomRight;
+	[self setImageRoundCorners:rectCorner];
+}
+
+- (void)setImageRoundCorners:(UIRectCorner)rectCorner
+{
+	UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.fillingBackgroundImageView.bounds
+												   byRoundingCorners:rectCorner
+														 cornerRadii:CGSizeMake(2.0f, 2.0f)];
+	// Create the shape layer and set its path
+	CAShapeLayer *maskLayer = [CAShapeLayer layer];
+	maskLayer.frame = self.fillingBackgroundImageView.bounds;
+	maskLayer.path = maskPath.CGPath;
+	// Set the newly created shape layer as the mask for the image view's layer
+	self.fillingBackgroundImageView.layer.mask = maskLayer;
 }
 
 @end

@@ -13,4 +13,5 @@
 	#import <Foundation/Foundation.h>
 	#import "UIView+FrameOperations.h"
 	#import "SkinHelper.h"
+	#import "UIColor+i7HexColor.h"
 #endif

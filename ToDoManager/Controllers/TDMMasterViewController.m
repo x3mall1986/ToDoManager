@@ -9,8 +9,11 @@
 #import "TDMMasterViewController.h"
 
 #import "TDMDetailViewController.h"
-#import "TDMCellImageView.h"
 #import "TDMCellExtended.h"
+#import "TDMFillingProgressViewController.h"
+
+#define ROW_TITLE_KEY @"title"
+#define ROW_PERCENT_KEY @"percent"
 
 @interface TDMMasterViewController () {
 	NSArray *_rows;
@@ -23,7 +26,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	_rows = @[@"Выпускной", @"Поход в горы", @"Свадьба у Васи и Кристины", @"Тюнинг авто"];
+//	_rows = @[@"Выпускной", @"Поход в горы", @"Свадьба у Васи и Кристины", @"Тюнинг авто"];
+	_rows = @[@{ROW_TITLE_KEY: @"Выпускной", ROW_PERCENT_KEY: @(100)},
+		   @{ROW_TITLE_KEY: @"Поход в горы", ROW_PERCENT_KEY: @(75)},
+		   @{ROW_TITLE_KEY: @"Свадьба у Васи и Кристины", ROW_PERCENT_KEY: @(25)},
+		   @{ROW_TITLE_KEY: @"Тюнинг авто", ROW_PERCENT_KEY: @(0)}];
 }
 
 //- (void)insertNewObject:(id)sender
@@ -49,7 +56,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	CGSize size = [_rows[indexPath.row] sizeWithFont:[SkinHelper RobotoLightWithSize:32.0f]
+	CGSize size = [_rows[indexPath.row][ROW_TITLE_KEY] sizeWithFont:[SkinHelper RobotoLightWithSize:32.0f]
 								   constrainedToSize:CGSizeMake(250, 120)
 									   lineBreakMode:NSLineBreakByWordWrapping];
 	if (size.height == 38) {
@@ -62,11 +69,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TDMCellExtended *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-	TDMCellImageView *image = [TDMCellImageView new];
-//	image.fillPercent = 100.0f;
+	TDMFillingProgressViewController *fillingController = [TDMFillingProgressViewController new];
+	fillingController.fillingPercent = [_rows[indexPath.row][ROW_PERCENT_KEY] floatValue];
 	
-	cell.textLabel.text = _rows[indexPath.row];
-	cell.tdmImageView = image;
+	cell.textLabel.text = _rows[indexPath.row][ROW_TITLE_KEY];
+	cell.leftView = fillingController.view;
     return cell;
 }
 
